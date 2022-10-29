@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import '../Loginvalidation.dart';
+import '../Newhome.dart';
 
 class Signup extends StatefulWidget {
 
@@ -83,14 +84,16 @@ class _SignupState extends State<Signup> {
                     fontSize: 16.0
                 );
               }
-            }, child: const Text("LOGIN")),
-          )
+            }, child: const Text("Sign Up")),
+          ),
+          TextButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>Loginvalidation()));}, child: const Text('Already have an account?Login'))
         ],
       ),
     ),
   );
   }
 }
+
 
 void main(){
   runApp(MaterialApp(home: Signup(),));
